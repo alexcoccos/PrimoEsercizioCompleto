@@ -11,7 +11,11 @@ module.exports = (function(){
   }
 
   var deleteLista = function(req,res){
-
+    Lista.findByIdAndRemove(req.param.id).then(function(data){
+      res.status(200).json(data);
+    }).catch(function(err){
+      res.status(500).send(err)
+    });
   }
   var creaLista = function(req,res){
     var nuovo = new Lista(req.body);
