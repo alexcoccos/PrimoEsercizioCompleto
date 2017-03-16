@@ -5,7 +5,7 @@ var Lista = require('./todo.controller.js');
 //crea lista
 router.post('/',Lista.creaLista);
 //prendi tutti gli elementi di lista
-// router.get('/',Lista.getLista);
+router.get('/',Lista.getLista);
 // //elimina dalla lista
 // router.delete('/',Lista.deleteLista);
 
