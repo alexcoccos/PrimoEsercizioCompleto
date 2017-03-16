@@ -5,17 +5,17 @@ module.exports = function(app,express){
   app.use(bodyparser.json());
  // rotte statiche che evitano casini dopo
  //bootstrap
-  app.use('bootstrap',express.static(path.join(__dirname,"..","..","node_module","bootstrap","dist")));
+  app.use('/bootstrap',express.static(path.join(__dirname,"..","..","node_modules","bootstrap","dist")));
 //jquery
-  app.use('/jquery',express.static(path.join(__dirname,"..","..","node_module","jquery","dist")));
+  app.use('/jquery',express.static(path.join(__dirname,"..","..","node_modules","jquery","dist")));
 //angular
-  app.use('/angular',express.static(path.join(__dirname,"..","..","node_module","angular")));
+  app.use('/angular',express.static(path.join(__dirname,"..","..","node_modules","angular")));
 //angular-ui-router
-  app.use('/angular-ui-router',express.static(path.join(__dirname,"..","..","node_module","/angular-ui-router")));
+  app.use('/angular-ui-router',express.static(path.join(__dirname,"..","..","node_modules","angular-ui-router")));
 //file js
-  app.use('/js',express.static(path.join(__dirname,"..","..","cliet","js")));
+  app.use('/js',express.static(path.join(__dirname,"..","..","client","js")));
 //file css
-  app.use('/css',express.static(path.join(__dirname,"..","..","cliet","css")));
+  app.use('/css',express.static(path.join(__dirname,"..","..","client","css")));
 
 //rotta per l'index generale
   app.get('/',function(req,res){
