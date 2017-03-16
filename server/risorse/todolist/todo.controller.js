@@ -11,7 +11,7 @@ module.exports = (function(){
   }
 
   var deleteLista = function(req,res){
-    Lista.findByIdAndRemove(req.param.id).then(function(data){
+    Lista.findByIdAndRemove(req.params.id).then(function(data){
       res.status(200).json(data);
     }).catch(function(err){
       res.status(500).send(err)

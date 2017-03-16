@@ -10,6 +10,10 @@ var ListaSchema= new Schema({
   descrizione:{
     type:String,
     required: [true,"Inserisci descrizione"]
+  },
+  fatto: {
+    type: Boolean,
+    default: false
   }
 
 });
